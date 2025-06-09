@@ -125,7 +125,7 @@ export function RayMarchingMaterial() {
 
   useFrame(({ clock }) => {
     // @ts-ignore
-    const parent = matRef.current.__r3f.parent;
+    const parent = matRef.current.__r3f.parent.object;
     if (parent) {
       raymarchedMaterial.update(parent);
     }
