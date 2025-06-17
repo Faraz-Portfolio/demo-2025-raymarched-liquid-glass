@@ -11,11 +11,10 @@ export class RaymarchedStandardMaterial extends THREE.MeshPhysicalMaterial {
 
   constructor(vertexShader: string, fragmentShader: string, uniforms: any) {
     super({
+      roughness: 0.2,
+      transmission: 1,
+      thickness: 1,
       transparent: true,
-      metalness: 1,
-      roughness: 0.5,
-      clearcoat: 1,
-      clearcoatRoughness: 0,
       // color: "#121212",
     });
 

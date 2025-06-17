@@ -97,8 +97,12 @@ export function RayMarchingMaterial() {
         d = smoothMin(d, box, 0.1);
       }
 
-      float sphere = sdSphere(p, 0.5);
+      float sphere = sdSphere(p, 0.25);
       d = smoothMin(d, sphere, 0.1);
+
+      vec3 sphere2Pos = p + vec3(cos(uTime) * 0.5, sin(uTime * 0.5) * 0.5, 0.0);
+      float sphere2 = sdSphere(sphere2Pos, 0.25);
+      d = smoothMin(d, sphere2, 0.1);
       
       return d;
     }
